@@ -4,26 +4,29 @@ namespace PracticeExcercise0
 {
     public class Program
     {
+
         static void Main(string[] args)
         {
-            Console.WriteLine(IsPalindrome("mom "));
-            Console.WriteLine(IsPalindrome("Mom"));
+            //Console.WriteLine(IsPalindrome("mom "));
+            //Console.WriteLine(IsPalindrome("Mom"));
             Console.WriteLine(IsPalindrome("Race car"));
             Console.WriteLine(IsPalindrome("A nut for a jar of tuna"));
 
-            Console.WriteLine(Reverse("coffee"));
-            Console.WriteLine(Reverse("abcdefghijklmnopqrstuvwxyz"));
-            Console.WriteLine(Reverse("Dad"));
-            Console.WriteLine(Reverse(""));
-            Console.WriteLine(Reverse("savannaH"));
+            //Console.WriteLine(Reverse("coffee"));
+            //Console.WriteLine(Reverse("abcdefghijklmnopqrstuvwxyz"));
+            //Console.WriteLine(Reverse("Dad"));
+            //Console.WriteLine(Reverse(""));
+            //Console.WriteLine(Reverse("savannaH"));
 
-            Console.WriteLine(ReverseInt(369));
+            Console.WriteLine(ReverseInt(369)); // 963
+            Console.WriteLine(ReverseInt(-369)); // -963
 
-            Console.WriteLine(IsUnique("mom"));
-            IsUnique("");
-            IsUnique("mom");
-            IsUnique("Robbie");
-            IsUnique("Judah");
+
+            //Console.WriteLine(IsUnique("mom"));
+            //IsUnique("");
+            //IsUnique("mom");
+            //IsUnique("Robbie");
+            //IsUnique("Judah");
 
         }
 
@@ -31,13 +34,28 @@ namespace PracticeExcercise0
         // #1
         public static bool IsPalindrome(string s)
         {
-            return true;
+            // clean up the string
+            // remove spaces
+            // lowercase it
+            string cleanString = s.ToLower().Replace(" ", "");
+
+            // reverse the clean string
+            string reversed = Reverse(cleanString);
+
+            // check if reverse string is the same as the clean string
+
+          
+            return (reversed == cleanString);
         }
 
         private static string Reverse(string s)
         {
             string result = "";
-            
+
+            foreach( char c in s)
+            {
+                result = result.Insert(0, c.ToString() );
+            }
 
             return result;
         }
@@ -45,13 +63,38 @@ namespace PracticeExcercise0
         // #2 
         public static int ReverseInt(int i)
         {
-            return 0;
+            int x = i;
+            int reverse = 0;
+
+            while( x != 0 )
+            {
+                int remainder = x % 10;
+                reverse = reverse * 10 + remainder;
+                x = x / 10;
+            }
+
+            return reverse;
         }
 
         // #3
         public static bool IsUnique(string s)
         {
-            
+            string cleanString = s.ToLower().Replace(" ", "");
+
+            for( int i=0; i < cleanString.Length; i++)
+            {
+                // compare cleanString[i] to every subsequent letter
+                // in cleanString
+
+                for(int j=i+1; j < cleanString.Length; j++)
+                {
+                    if (cleanString[i] == cleanString[j])
+                    {
+                        return false;
+                    }
+                }
+            }
+
             return true;
         }
 
@@ -59,6 +102,25 @@ namespace PracticeExcercise0
         // #4
         public static bool IsNeilNumber(int i)
         {
+
+            for(int ) ;
+            {
+                for (int j )
+                // separate number by each int
+              
+                // take every int and raise it to mth pwr
+                 = Math.Pow( ,)
+                // add all numbers that were raised together
+                int sum = 
+                // if equals original number its true
+                if sum = number;
+                    true
+                else 
+                    false
+                
+            }
+
+
             return true;
         }
 
