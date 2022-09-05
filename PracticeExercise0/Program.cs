@@ -101,7 +101,22 @@ namespace PracticeExcercise0
 
         // #4
         public static bool IsNeilNumber(int i)
-        {
+        {  
+         for(int ) ;
+            {
+                for (int number )
+                // separate number by each int
+                string.Split(' ');
+                // take every int and raise it to mth pwr
+                 int powerSum = Math.Pow( ,)
+                // add all numbers that were raised together
+                int sum = powerSum + 
+                // if equals original number its true
+                if sum == int number;
+                    true
+                else 
+                    false
+                
             return true;
         }
 
