@@ -71,6 +71,7 @@ namespace UnitTests
             Assert.AreEqual(true, Program.IsUnique("abcdefg"));           
             Assert.AreEqual(true, Program.IsUnique(""));
             Assert.AreEqual(true, Program.IsUnique("steward"));
+            Assert.AreEqual(true, Program.IsUnique("the man is old"));
         }
 
         [TestMethod]

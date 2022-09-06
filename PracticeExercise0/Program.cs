@@ -102,14 +102,16 @@ namespace PracticeExcercise0
         // #4
         public static bool IsNeilNumber(int i)
         {
-            int numDigits = (int)Math.Ceiling(Math.Log10(i));
+            int numDigits = i.ToString().Length;
+            int sum = 0;
 
-            int nDigits = i.ToString().Length;
+            foreach (char c in i.ToString())
+            {
+                int powDigits = (int)Math.Pow(int.Parse(c.ToString()), numDigits);
+                sum = sum + powDigits;
+            }
 
-
- 
-
-           
+            return sum == i;
         }
 
     }
