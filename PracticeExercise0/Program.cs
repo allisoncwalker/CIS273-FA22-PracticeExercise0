@@ -97,31 +97,19 @@ namespace PracticeExcercise0
 
             return true;
         }
-
+         
 
         // #4
         public static bool IsNeilNumber(int i)
         {
+            int numDigits = (int)Math.Ceiling(Math.Log10(i));
 
-            for(int ) ;
-            {
-                for (int j )
-                // separate number by each int
-              
-                // take every int and raise it to mth pwr
-                 = Math.Pow( ,)
-                // add all numbers that were raised together
-                int sum = 
-                // if equals original number its true
-                if sum = number;
-                    true
-                else 
-                    false
-                
-            }
+            int nDigits = i.ToString().Length;
 
 
-            return true;
+ 
+
+           
         }
 
     }
